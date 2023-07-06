@@ -1,0 +1,26 @@
+h1 {   /* для h1 цвет фона красный */
+    background: red;
+}
+
+.paragraph-1{
+    background: blue;
+    font-size: 32pt;
+    color: whitesmoke;
+}
+
+.paragraph-2{
+
+    border: 10px solid yellow;
+    border-radius: 5px;   /* закругление рамки */
+    font-size: 24pt;
+    margin-bottom: 60px;   /*отступ рамки*/
+    padding-bottom: 60px;   /*отступ справа*/
+    padding-left: 60px;   /*слева*/
+}
+
+.paragraph-3{
+
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+}

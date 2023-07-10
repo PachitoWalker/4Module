@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">   <!-- что бы символы нормально читались -->
+    <title>Page 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <a href="page_2.html" target="_blank">Ссылка на page_2</a>   <!-- href - сюда пишется ссылка, target - параметры открытия окна ( в новом окне, в новом браузере), между тегами - что написано на ссылке-->
+    <form>      <!-- создает формы (например поля для регистрации)-->
+        <label for="login">Логин</label>   <!-- подписи для форм (в фор пишем id объекта, и тогда при нажатии на надпись будет как-будто вы нажали на объект)-->
+        <input id = "login" type="text" class = "form-control form-control-lg">     <!-- создать поле для текста-->   <!-- form-control form-control-lg - большое поле -->
+       
+        <label for="pass">Пароль</label>
+        <input id = "pass" type="password" class = "form-control form-control-sm">     <!-- создать поле для пароля-->   <!-- form-control form-control-sm - маленькое поле-->
+
+        <label for="text">Немного о нас</label>
+        <textarea cols="50" float:right>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam incidunt nesciunt id explicabo perspiciatis veritatis doloremque tempora eveniet magnam vero ex iusto aliquam sint rerum, quam nostrum dolores reprehenderit autem?</textarea>
+       
+        <label for="chbx">Соглашение на условие</label>
+        <input id = "chbx" type="checkbox" class = "form-check-input">     <!-- создать поле для галочки-->
+
+        <input type="button" value="Зарегестрироваться" class = "btn btn-primary">
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+<!-- о form-control (здесь в значении классов) на сайте https://getbootstrap.su/docs/5.3/forms/form-control/-->

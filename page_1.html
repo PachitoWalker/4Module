@@ -6,6 +6,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Панель навигации</span>
+        </div>
+    </nav>
+    
     <a href="page_2.html" target="_blank">Ссылка на page_2</a>   <!-- href - сюда пишется ссылка, target - параметры открытия окна ( в новом окне, в новом браузере), между тегами - что написано на ссылке-->
     <form>      <!-- создает формы (например поля для регистрации)-->
         <label for="login">Логин</label>   <!-- подписи для форм (в фор пишем id объекта, и тогда при нажатии на надпись будет как-будто вы нажали на объект)-->
@@ -15,7 +21,7 @@
         <input id = "pass" type="password" class = "form-control form-control-sm">     <!-- создать поле для пароля-->   <!-- form-control form-control-sm - маленькое поле-->
 
         <label for="text">Немного о нас</label>
-        <textarea cols="50" float:right>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam incidunt nesciunt id explicabo perspiciatis veritatis doloremque tempora eveniet magnam vero ex iusto aliquam sint rerum, quam nostrum dolores reprehenderit autem?</textarea>
+        <textarea cols="50" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam incidunt nesciunt id explicabo perspiciatis veritatis doloremque tempora eveniet magnam vero ex iusto aliquam sint rerum, quam nostrum dolores reprehenderit autem?</textarea>
        
         <label for="chbx">Соглашение на условие</label>
         <input id = "chbx" type="checkbox" class = "form-check-input">     <!-- создать поле для галочки-->

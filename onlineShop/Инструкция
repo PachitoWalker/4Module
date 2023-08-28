@@ -1,0 +1,45 @@
+Для запуска сервера нужно сделать следующее:
+
+    1. Сохранить все измененные файлы
+    2. Прописать команду "cd .\имя папки с приложением\"
+    3. Прописать команду "python manage.py runserver"
+    4. MTV - Model Templates Veiws (концепция работы приложения)
+
+    разметка: {% block название %}
+              ...
+              {% endblock%}
+
+1. Создали папку templates с html шаблонами
+2. В settings в55 строке(TEMPLATES) в ключе "DIRS" указали путь для templates к onlineShop 
+3. В файле Veiws в функции index отобразили html страницу (index.html return render(request, 'index.html'))
+4. Создали папку static со статичными файлами (кртинки и тп), в том числе CSS
+5. В файле settings указали на 121 строке путь до static ( STATICfiles_DIRS [
+                                                                Path.joinpath(BASE_DIR, 'static')
+                                                                ])
+
+6. В index.html загрузили static ({%load static %})
+7. Что бы все файлы загрузились с учетом statics, заменили все ссылки с окончанием .css в head (href = '///.css') на href = "{% static '///.css' %}"
+8. Делаем картинки статичными, заменяя <img src="img/adv.png" class='...' alt = '...'> на <img src="{% static 'img.png' %}" class='...' alt = '...'
+9. Для того что бы отображалась наша картинка (img/adv.png) переименовываем ее в другое имя (img/shop.png)
+10. подгружаем js из static скрипт (219 строка) <script src="js/bootstrap.bundle.min.js"></script>, изменяя на <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+11. повторяем 3 пункт, но для файла top-sellers.html
+12. добавляем ссылку на путь до top_sellers в файле urls
+13. создаем файл base.html для шаблона, копируем туда код из index.html
+14. создаем шаблон для title (в base html, 12 строка)
+15. создаем шаблон для content (в base.html, 16 строка)
+16. создаем шаблон для scripts
+
+17. в index.html подключаем base.html с помощью {% extends base.html %}
+18. удаляем весть head
+19. удаляем весть title
+20. удаляем тег html (без содержимого)
+21. удаляем тег body (без содержимого)
+20. удаляем весть тег scripts
+
+21. пишем блок title (<%block name%> Title <%endblock%>)
+22. пишем блок content (то же самое, только вместо Title содержимое бывшего body)
+23. пишем блок для scripts (так же)
+24. находим ссылки на странице (href="top-sellers.html") и меняем на hrer="{% url 'top-sellers' %}"
+25. заходим в top_sellers и в 17 строке меняем index.html на / (/ значит домашняя страница)
+26. идем в urls и даем им имя ( добавив аргумент name)
